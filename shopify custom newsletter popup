@@ -1,0 +1,65 @@
+Source:https://www.youtube.com/watch?v=LXotnW7hRHw&t=338s
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+<script>
+// jQuery WebSensePro Subscribe Popup 
+// Triggers =  atendpage | onload | onidle
+// Animations= fade | flyInRight | flyInLeft | flyInUp | flyInDown
+
+!function(o){var n={trigger:"onload",animation:"fade",delay:100,showOnce:!1,autoClose:!1,scrollableModal:!1};o.fn.websenseprosubscribe=function(s){var e=o.extend({},n,s),i=o(this),a=!1,l=!1;switch(i.addClass("sb"),o.fn.openWindow=function(){o(this).is(":hidden")&&!1==a&&!1==l&&(l=!0,setTimeout(function(){!0==e.scrollableModal?o(".sb-overlay").length<1&&(o("body").append("<div class='sb-overlay'><div class='sb-close-backdrop'></div><div class='sb sb-withoverlay'>"+o(".sb").html()+"</div></div>"),o(".sb-close-backdrop, .sb-close-btn").one("click",function(){return o(".sb.sb-withoverlay").closeWindow(),!1}),o(".sb.sb-withoverlay").removeClass("sb-animation-"+e.animation.replace("In","Out")).addClass("sb-animation-"+e.animation),setTimeout(function(){o(".sb.sb-withoverlay").show(),o("body").addClass("sb-open sb-open-with-overlay")},300)):o(".sb-overlay").length<1&&(o("body").append("<div class='sb-overlay'><div class='sb-close-backdrop'></div></div>"),o(".sb").removeClass("sb-animation-"+e.animation.replace("In","Out")).addClass("sb-animation-"+e.animation),o(".sb-close-backdrop, .sb-close-btn").one("click",function(){return o(".sb").closeWindow(),!1}),setTimeout(function(){o(".sb").show(),o("body").addClass("sb-open")},300)),!0==e.showOnce&&(a=!0),l=!1},e.delay))},o.fn.closeWindow=function(){o(this).is(":visible")&&!1==l&&(l=!0,!0==e.scrollableModal?(o(".sb.sb-withoverlay").removeClass("sb-animation-"+e.animation).addClass("sb-animation-"+e.animation.replace("In","Out")),setTimeout(function(){o(".sb.sb-withoverlay").hide(),o("body").removeClass("sb-open sb-open-with-overlay"),setTimeout(function(){o(".sb-overlay").remove()},300)},300)):(o(".sb").removeClass("sb-animation-"+e.animation).addClass("sb-animation-"+e.animation.replace("In","Out")),setTimeout(function(){o(".sb").hide(),o("body").removeClass("sb-open"),setTimeout(function(){o(".sb-overlay").remove()},300)},300)),l=!1)},o.fn.scrollDetection=function(n,s){var e,i=new Date().getTime();o(window).scroll(function(){var n=new Date().getTime();n-i>400&&(o(this).trigger("scrollStart"),i=n),clearTimeout(e),e=setTimeout(function(){o(window).trigger("scrollEnd")},300)}),"scrollStart"==n&&o(window).bind("scrollStart",function(){o(window).unbind("scrollEnd"),s()}),"scrollEnd"==n&&o(window).bind("scrollEnd",function(){o(window).unbind("scrollStart"),s()})},e.trigger){case"atendpage":o(window).scroll(function(){var n=o(window).scrollTop();n>=o(document).height()-o(window).height()?i.openWindow():n+300<o(document).height()-o(window).height()&&!0==e.autoClose&&i.closeWindow()});break;case"onload":o(window).on("load",function(){i.openWindow(),!0==e.autoClose&&i.scrollDetection("scrollStart",function(){i.closeWindow()})});break;case"onidle":o(window).on("load",function(){i.scrollDetection("scrollEnd",function(){i.openWindow()}),!0==e.autoClose&&i.scrollDetection("scrollStart",function(){i.closeWindow()})})}}}(window.jQuery);$(document).ready(function(){"true"!==localStorage.popupShown&&($(".subscribe-me").websenseprosubscribe(),localStorage.popupShown="true")});
+</script>
+
+
+<style>
+.sb,.sb.sb-withoverlay{left:50%;margin-left:-250px}.sb,.sb-overlay{opacity:0;position:fixed}.sb{display:none;top:50%;margin-top:-150px;width:500px;height:200px;background:#fff;padding:25px;box-shadow:0 2px 3px rgba(0,0,0,.5);-moz-box-shadow:0 2px 3px rgba(0,0,0,.5);-webkit-box-shadow:0 2px 3px rgba(0,0,0,.5);z-index:1999}.sb-close-backdrop,.sb-overlay{top:0;left:0;width:100%;height:100%}.sb h2{margin-top:0}.sb p{font-size:20px}.sb form input[type=email],.sb form input[type=password],.sb form input[type=text],.sb form textarea{margin:0;border:none;background:#f7f7f7;padding:18px 10px;font-size:16px;width:79%;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}.sb form input[type=submit]{padding:18px 10px;background:#000;font-size:16px;text-transform:uppercase;border:none;color:#fff;width:20%;margin:0}.sb .sb-close-btn{position:absolute;right:10px;top:10px;color:#ccc}.sb.sb-withoverlay{position:absolute;top:200px}.sb-open.sb-open-with-overlay{overflow:hidden}.sb-open .sb,.sb-open .sb-overlay{opacity:1}.sb-overlay{background:rgba(0,0,0,.58);right:0;z-index:100;-webkit-transition:.5s ease-in-out;-moz-transition:.5s ease-in-out;-o-transition:.5s ease-in-out;transition:.5s ease-in-out;overflow:auto}.sb-close-backdrop{position:absolute;cursor:pointer}[class*=" sb-animation-"],[class^=sb-animation-]{-webkit-animation-duration:.5s;-moz-animation-duration:.5s;-o-animation-duration:.5s;animation-duration:.5s}.sb-animation-flyInRight{-webkit-animation-name:flyInRight;-moz-animation-name:flyInRight;-o-animation-name:flyInRight;animation-name:flyInRight}.sb-animation-flyOutRight{-webkit-animation-name:flyOutRight;-moz-animation-name:flyOutRight;-o-animation-name:flyOutRight;animation-name:flyOutRight}.sb-animation-flyInLeft{-webkit-animation-name:flyInLeft;-moz-animation-name:flyInLeft;-o-animation-name:flyInLeft;animation-name:flyInLeft}.sb-animation-flyOutLeft{-webkit-animation-name:flyOutLeft;-moz-animation-name:flyOutLeft;-o-animation-name:flyOutLeft;animation-name:flyOutLeft}.sb-animation-flyInUp{-webkit-animation-name:flyInUp;-moz-animation-name:flyInUp;-o-animation-name:flyInUp;animation-name:flyInUp}.sb-animation-flyOutUp{-webkit-animation-name:flyOutUp;-moz-animation-name:flyOutUp;-o-animation-name:flyOutUp;animation-name:flyOutUp}.sb-animation-flyInDown{-webkit-animation-name:flyInDown;-moz-animation-name:flyInDown;-o-animation-name:flyInDown;animation-name:flyInDown}.sb-animation-flyOutDown{-webkit-animation-name:flyOutDown;-moz-animation-name:flyOutDown;-o-animation-name:flyOutDown;animation-name:flyOutDown}@-webkit-keyframes flyInRight{0%{opacity:0;-webkit-transform:translateX(3000px)}100%{-webkit-transform:translateX(0)}}@-moz-keyframes flyInRight{0%{opacity:0;-moz-transform:translateX(3000px)}100%{-moz-transform:translateX(0)}}@-o-keyframes flyInRight{0%{opacity:0;-o-transform:translateX(3000px)}100%{-o-transform:translateX(0)}}@keyframes flyInRight{0%{opacity:0;transform:translateX(3000px)}100%{transform:translateX(0)}}@-webkit-keyframes flyOutRight{0%{-webkit-transform:translateX(0)}100%{opacity:0;-webkit-transform:translateX(3000px)}}@-moz-keyframes flyOutRight{0%{-moz-transform:translateX(0)}100%{opacity:0;-moz-transform:translateX(3000px)}}@-o-keyframes flyOutRight{0%{-o-transform:translateX(0)}100%{opacity:0;-o-transform:translateX(3000px)}}@keyframes flyOutRight{0%{transform:translateX(0)}100%{opacity:0;transform:translateX(3000px)}}@-webkit-keyframes flyInLeft{0%{opacity:0;-webkit-transform:translateX(-3000px)}100%{-webkit-transform:translateX(0)}}@-moz-keyframes flyInLeft{0%{opacity:0;-moz-transform:translateX(-3000px)}100%{-moz-transform:translateX(0)}}@-o-keyframes flyInLeft{0%{opacity:0;-o-transform:translateX(-3000px)}100%{-o-transform:translateX(0)}}@keyframes flyInLeft{0%{opacity:0;transform:translateX(-3000px)}100%{transform:translateX(0)}}@-webkit-keyframes flyOutLeft{0%{-webkit-transform:translateX(0)}100%{opacity:0;-webkit-transform:translateX(-3000px)}}@-moz-keyframes flyOutLeft{0%{-moz-transform:translateX(0)}100%{opacity:0;-moz-transform:translateX(-3000px)}}@-o-keyframes flyOutLeft{0%{-o-transform:translateX(0)}100%{opacity:0;-o-transform:translateX(-3000px)}}@keyframes flyOutLeft{0%{transform:translateX(0)}100%{opacity:0;transform:translateX(-3000px)}}@-webkit-keyframes flyInUp{0%{opacity:0;-webkit-transform:translateY(-2000px)}100%{-webkit-transform:translateY(0)}}@-moz-keyframes flyInUp{0%{opacity:0;-moz-transform:translateY(-2000px)}100%{-moz-transform:translateY(0)}}@-o-keyframes flyInUp{0%{opacity:0;-o-transform:translateY(-2000px)}100%{-o-transform:translateY(0)}}@keyframes flyInUp{0%{opacity:0;transform:translateY(-2000px)}100%{transform:translateY(0)}}@-webkit-keyframes flyOutUp{0%{-webkit-transform:translateY(0)}100%{opacity:0;-webkit-transform:translateY(-2000px)}}@-moz-keyframes flyOutUp{0%{-moz-transform:translateY(0)}100%{opacity:0;-moz-transform:translateY(-2000px)}}@-o-keyframes flyOutUp{0%{-o-transform:translateY(0)}100%{opacity:0;-o-transform:translateY(-2000px)}}@keyframes flyOutUp{0%{transform:translateY(0)}100%{opacity:0;transform:translateY(-2000px)}}@-webkit-keyframes flyInDown{0%{opacity:0;-webkit-transform:translateY(2000px)}100%{-webkit-transform:translateY(0)}}@-moz-keyframes flyInDown{0%{opacity:0;-moz-transform:translateY(2000px)}100%{-moz-transform:translateY(0)}}@-o-keyframes flyInDown{0%{opacity:0;-o-transform:translateY(2000px)}100%{-o-transform:translateY(0)}}@keyframes flyInDown{0%{opacity:0;transform:translateY(2000px)}100%{transform:translateY(0)}}@-webkit-keyframes flyOutDown{0%{-webkit-transform:translateY(0)}100%{opacity:0;-webkit-transform:translateY(2000px)}}@-moz-keyframes flyOutDown{0%{-moz-transform:translateY(0)}100%{opacity:0;-moz-transform:translateY(2000px)}}@-o-keyframes flyOutDown{0%{-o-transform:translateY(0)}100%{opacity:0;-o-transform:translateY(2000px)}}@keyframes flyOutDown{0%{transform:translateY(0)}100%{opacity:0;transform:translateY(2000px)}}
+</style>
+
+
+
+<div class="subscribe-me" style="display:none;">
+  <h2>Subscribe our Newsletter</h2>
+  <a href="#close" class="sb-close-btn">x</a>
+  <p>Subscribe to our mailing list</p>
+   {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
+              <input type="hidden" name="contact[tags]" value="newsletter">
+              <div class="newsletter-form__field-wrapper">
+                <div class="field">
+                  <input
+                    id="NewsletterForm--{{ section.id }}"
+                    type="email"
+                    name="contact[email]"
+                    class="field__input"
+                    value="{{ form.email }}"
+                    aria-required="true"
+                    autocorrect="off"
+                    autocapitalize="off"
+                    autocomplete="email"
+                    {% if form.errors %}
+                      autofocus
+                      aria-invalid="true"
+                      aria-describedby="ContactFooter-error"
+                    {% elsif form.posted_successfully? %}
+                      aria-describedby="ContactFooter-success"
+                    {% endif %}
+                    placeholder="{{ 'newsletter.label' | t }}"
+                    required
+                  >
+                  <label class="field__label" for="NewsletterForm--{{ section.id }}">
+                    {{ 'newsletter.label' | t }}
+                  </label>
+                  <button type="submit" class="newsletter-form__button field__button" name="commit" id="Subscribe" aria-label="{{ 'newsletter.button_label' | t }}">
+                    {% render 'icon-arrow' %}
+                  </button>
+                </div>
+                {%- if form.errors -%}
+                  <small class="newsletter-form__message form__message" id="ContactFooter-error">{% render 'icon-error' %}{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</small>
+                {%- endif -%}
+              </div>
+              {%- if form.posted_successfully? -%}
+                <h3 class="newsletter-form__message newsletter-form__message--success form__message" id="ContactFooter-success" tabindex="-1" autofocus>{% render 'icon-success' %}{{ 'newsletter.success' | t }}</h3>
+              {%- endif -%}
+            {%- endform -%}
+</div>
